@@ -27,4 +27,3 @@ def extract(image,page):
         #cv.imshow(str(i), croppedlis[i])
 
 os.chdir(r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Saves")
-# extract(image,1)
