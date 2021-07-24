@@ -43,7 +43,7 @@ def extract_piece(image,page):
                 break
         #name="page_"+str(page)+"image"+str(i+1)+r".png"
         #cv.imwrite(name, croppedlis[i])
-        cv.imshow(str(i), croppedlis[i])
+        #cv.imshow(str(i), croppedlis[i])
 
 os.chdir(r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Saves")
 # extract(image,1)

@@ -10,12 +10,26 @@
 #link with pdf_extractor using a generator
 
 import cv2 as cv
-import imutils  
+
+import imutils
 import numpy as np
 import os
 from pdf2image import convert_from_path
 from extract import extract
 from extract_piece import extract_piece
+
+def get_max_name():     # finds what to name saved img to not mess up previously saved images
+    lis=os.listdir(path=r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Pieces")
+    max=-1
+    lis.remove("holder.jpeg")
+    for imgname in lis:
+        imgname = imgname.strip(".png")
+        les = imgname.split("_")[0]
+        max = int(les) if max < int(les) else max
+    return max
+
+
+
 count=0
 os.chdir(r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Pieces")
 lastpg=49
@@ -28,9 +42,8 @@ for i in range(len(lis)):
     while True:
         try:
             out_img = next(itera)
-            cv.imwrite(str(count)+r".jpeg",out_img)
-            print(1)
+            cv.imwrite(str(count)+r".png",out_img)
             count+=1
         except StopIteration:
             break
-
+print(get_max_name())
