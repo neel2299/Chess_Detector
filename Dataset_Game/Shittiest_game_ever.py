@@ -38,7 +38,7 @@ screen.blit(rook.image,(320,250))
 screen.blit(queen.image,(20,350))
 screen.blit(king.image,(120,350))
 display.flip()
-count=0
+count=192
 path=r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Pieces"+"\\"
 os.chdir(r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Dataset_Game\Marked_Dataset")
 while running:
