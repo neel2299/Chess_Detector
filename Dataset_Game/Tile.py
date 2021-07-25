@@ -18,7 +18,6 @@ class special_tile():
         self.col = col
         self.name = name
         self.image_path = path+self.name
-        print(self.image_path)
         self.image = image.load(self.image_path)
         self.image = transform.scale(self.image, (gc.IMAGE_SIZE - 2 * gc.MARGIN, gc.IMAGE_SIZE - 2 * gc.MARGIN))
 
