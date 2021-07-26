@@ -19,7 +19,8 @@ def piece_from_img(img):
 
 def extract_piece(image,page):
     img = cv.Canny(image, 2, 10)
-    #cv.imshow("sh", img)
+    # cv.imshow("sh", img)
+    # cv.waitKey(0)
     croppedlis = []
     contours, hierarchy = cv.findContours(img, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
     for cnt in contours:
