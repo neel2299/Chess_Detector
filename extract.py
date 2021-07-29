@@ -11,7 +11,7 @@ def extract(image,page):
     contours, hierarchy = cv.findContours(img, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
     for cnt in contours:
         area = cv.contourArea(cnt)
-        if area > (img.shape[0] * img.shape[1] * 1 / 15):  # IMPORTANT:add square condition, multiplicant was 1/12
+        if area > (img.shape[0] * img.shape[1] * 1 / 12):  # IMPORTANT:add square condition, multiplicant was 1/12
             cv.drawContours(image, cnt, -1, (255, 100, 100), 3)
             peri = cv.arcLength(cnt, True)
             approx = cv.approxPolyDP(cnt, 0.02 * peri, False)  # getting the boounding box
