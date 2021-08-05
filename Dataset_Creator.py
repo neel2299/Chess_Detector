@@ -31,13 +31,14 @@ def get_max_name():     # finds what to name saved img to not mess up previously
 
 
 
-count=2496
+count=0
 os.chdir(r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Pieces")
-lastpg=85
-firstpg=70
+lastpg=100
+firstpg=100
 #"C:/Users/suhaa/Desktop/Books/Hobbies/My_system.pdf"
 lis=convert_from_path(pdf_path="C:/Users/suhaa/Desktop/Books/Hobbies/My_system.pdf",last_page=lastpg,first_page=firstpg,poppler_path=r"C:\0 My programs\poppler-0.68.0_x86\poppler-0.68.0\bin")
 for i in range(len(lis)):
+    print(1)
     lis[i].save("holder.jpeg", "JPEG")
     image = cv.imread("holder.jpeg",)
     itera=extract_piece(image,firstpg+i)

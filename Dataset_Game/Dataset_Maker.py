@@ -4,8 +4,9 @@ raw_path=r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Dataset_Game\Marked_Dataset
 gen=os.walk(raw_path)
 count=0
 filelis=next(gen)[2]
+
 #raw path is the raw dataset path and we are shifting files to folders in base path
-base_path=r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Dataset_Game\Data\TRAIN"
+base_path=r"C:\Users\suhaa\Desktop\OCV\Chess_Detector\Dataset_Game\Data\VALIDATION"
 for file in filelis:
     FILE=file.lower()
     if "wpawn" in FILE: #file("Wbishop"):
